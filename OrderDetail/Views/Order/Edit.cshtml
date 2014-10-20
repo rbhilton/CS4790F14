@@ -1,0 +1,101 @@
+﻿@model OrderDetail.Models.OrderTbl
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>OrderTbl</legend>
+
+        @Html.HiddenFor(model => model.OrdId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrdNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrdNo)
+            @Html.ValidationMessageFor(model => model.OrdNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrdDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrdDate)
+            @Html.ValidationMessageFor(model => model.OrdDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CustNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CustNo)
+            @Html.ValidationMessageFor(model => model.CustNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmpNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmpNo)
+            @Html.ValidationMessageFor(model => model.EmpNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrdName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrdName)
+            @Html.ValidationMessageFor(model => model.OrdName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrdStreet)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrdStreet)
+            @Html.ValidationMessageFor(model => model.OrdStreet)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrdCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrdCity)
+            @Html.ValidationMessageFor(model => model.OrdCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrdState)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrdState)
+            @Html.ValidationMessageFor(model => model.OrdState)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrdZip)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrdZip)
+            @Html.ValidationMessageFor(model => model.OrdZip)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

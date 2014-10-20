@@ -1,0 +1,81 @@
+﻿@model OrderDetail.Models.OrderTbl
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>OrderTbl</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrdNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrdNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrdDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrdDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CustNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrdName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrdName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrdStreet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrdStreet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrdCity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrdCity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrdState)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrdState)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrdZip)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrdZip)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

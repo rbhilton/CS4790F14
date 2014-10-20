@@ -1,0 +1,81 @@
+﻿@model IEnumerable<OrderDetail.Models.OrderTbl>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdZip)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmpNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdZip)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OrdId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OrdId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OrdId })
+        </td>
+    </tr>
+}
+
+</table>

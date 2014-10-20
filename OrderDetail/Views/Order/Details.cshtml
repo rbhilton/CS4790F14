@@ -1,0 +1,44 @@
+﻿@model OrderDetail.Models.OrderTbl
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>OrderTbl</legend>
+
+   @Html.Partial("_OrderHeader")
+
+    <div>
+        @{
+            List<OrderDetail.Models.OrderDetail> orderDetails = ViewBag.OrderDetails;
+        }
+
+        <table>
+            <tr>
+                <th>Product Number</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            @foreach (var orderDetail in orderDetails)
+            {
+                <tr>
+                    <td>@orderDetail.ProdNo</td>
+                    <td>@orderDetail.ProdName</td>
+                    <td>@orderDetail.Qty</td>
+                    <td>@orderDetail.ProdPrice</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.OrdId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
