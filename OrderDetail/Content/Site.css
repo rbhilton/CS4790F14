@@ -34,6 +34,10 @@ textarea {
 .editor-field {
     margin: 0.5em 0 0 0;
 }
+.detail-list
+{
+    color: #FFF;
+}
 
 
 /* Styles for validation helpers
